@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 
 // Desafio Super Trunfo - Países
 // Tema 2 - Comparação das Cartas
@@ -7,9 +7,10 @@
 
 #include <stdio.h>
 
+
 int main (){
 
-    int codigo1, codigo2, pontos_turisticos1, pontos_turisticos2; 
+    int opcao, codigo1, codigo2, pontos_turisticos1, pontos_turisticos2; 
     char cidade1[50], cidade2[50];
     float pib1, pib2, area1, area2, populacao1, populacao2, densidade1, densidade2;
     
@@ -51,36 +52,59 @@ int main (){
 
     densidade1 = (area1 / populacao1);
     densidade2 = (area2 /populacao2);
-   
+    
+    printf("Digite ''1'' para comparar a população: \n");
+    printf("Digite ''2'' para comparar o PIB: \n");
+    printf("Digite ''3'' para comparar a Área por km²: \n");
+    printf("Digite ''4'' para comparar os pontos turísticos: \n");
+    printf("Digite ''5'' para comparar a Densidade populacional: \n");
+    scanf("%d", &opcao);
+    
+    switch (opcao) {
+    case 1:
+
     if (populacao1 > populacao2) {
     printf("A Cidade %s tem maior população.\n", cidade1);
     } else {
     printf("A Cidade %s tem maior população. \n", cidade2);
     }
-   
+    break;
+    
+    case 2:
+    
     if (pib1 > pib2) {
     printf("A Cidade %s tem o maior PIB.\n", cidade1);
     } else {
     printf("A Cidade %s tem o maior PIB. \n", cidade2);
     }
-
+    break;
+    
+    
+    case 3:
     if (area1 > area2) {
     printf("A Cidade %s  tem a maior Área por km².\n", cidade1);
     } else {
     printf("A Cidade %s  tem a maior Área por km². \n", cidade2);
     }
-
+    break;
+    
+    case 4:
     if (pontos_turisticos1 > pontos_turisticos2) {
     printf("A Cidade %s tem mais pontos turisticos.\n", cidade1);
     } else {
     printf("A Cidade %s tem mais pontos turisticos. \n", cidade2);
     }
+    break;
+    
+    case 5:
+    
     if (densidade1 < densidade2) {
     printf("Densidade Populacional %s.\n", cidade1);
     } else {
     printf("Densidade Populacional %s. \n", cidade2);
     }
-}
+    }
+}   
 
 
     // Cadastro das Cartas:
