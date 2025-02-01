@@ -65,8 +65,10 @@ int main (){
 
     if (populacao1 > populacao2) {
     printf("A Cidade %s tem maior população.\n", cidade1);
-    } else {
+    } else if (populacao1 > populacao2) {
     printf("A Cidade %s tem maior população. \n", cidade2);
+    } else {
+    printf("As Cidades tem o mesmo valor populacional! \n");    
     }
     break;
     
@@ -74,8 +76,10 @@ int main (){
     
     if (pib1 > pib2) {
     printf("A Cidade %s tem o maior PIB.\n", cidade1);
-    } else {
+    } else if  (pib1 > pib2) {
     printf("A Cidade %s tem o maior PIB. \n", cidade2);
+    } else {
+    printf("As Cidades tem o mesmo PIB! \n");   
     }
     break;
     
@@ -83,16 +87,20 @@ int main (){
     case 3:
     if (area1 > area2) {
     printf("A Cidade %s  tem a maior Área por km².\n", cidade1);
-    } else {
+    } else if  (area1 > area2) {
     printf("A Cidade %s  tem a maior Área por km². \n", cidade2);
+    } else {
+    printf("As Cidades tem a mesma Área por km²! \n");   
     }
     break;
     
     case 4:
     if (pontos_turisticos1 > pontos_turisticos2) {
     printf("A Cidade %s tem mais pontos turisticos.\n", cidade1);
-    } else {
+    } else if (pontos_turisticos1 > pontos_turisticos2) { 
     printf("A Cidade %s tem mais pontos turisticos. \n", cidade2);
+    } else {
+    printf("As Cidades tem a mesma quantidade de pontos túristicos!\n");   
     }
     break;
     
@@ -103,8 +111,15 @@ int main (){
     } else {
     printf("Densidade Populacional %s. \n", cidade2);
     }
+    break;
+    
+    default:
+    
+    printf("Inválido, tente novamente!\n");
+
     }
-}   
+}
+ 
 
 
     // Cadastro das Cartas:
